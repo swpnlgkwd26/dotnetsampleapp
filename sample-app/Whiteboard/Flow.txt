@@ -1,0 +1,59 @@
+﻿
+Middleware
+  -  Segment of code
+Built In : Use Static, StatusCode,Auth, Atuh
+Custom
+
+UseStatic
+ -  serve static files
+ -  wwwroot
+
+MVC 
+ - Controller
+   : Receives Request From the browser 
+   :  Get the model if required 
+    : Returns the view
+    : End with controller word
+    :  they are inherited from controller class
+    : IActionResult Type in Action Method
+
+
+23-06
+ 
+ Purpose 
+  -  Controller =>  View  
+ 
+ 1. ViewBag : 
+    - dynamic 
+    - ITs object
+    -  that can hold properties
+    -  ITs automatically available to view to View
+
+ Best Practice 
+   -  Build Model  : Class
+  Adv 
+ -  Intellisense
+
+ How to display data on view
+  - Razor Syntax :  C# 
+  -  .cshtml :   it will contain C# Plus HTML
+  -  @ symbol
+
+ 2. Repository Pattern :  Loosely coupled
+ -  We built an interface : IStoreRepo
+ -  Implement it : Class  :  PRoduct In memory 
+
+
+ Dependency Injection
+  - All the Depednet objects are provided from outside
+ -  Interface, Class , ctro Injection , service.AddScoped : To point Interface to apporpriate class
+
+
+
+
+
+
+
+  Problem  
+   - Intellisense
+ 2. ViewData :  is Equivalent to ViewBag and its old way.
