@@ -1,3 +1,6 @@
-﻿
+﻿@model  IEnumerable<sample_app.Models.Product> 
 
-<h1> This is an Index Page</h1>
+@foreach (var item in Model)
+{
+    <h2>@item.Name</h2>
+}

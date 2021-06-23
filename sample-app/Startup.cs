@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using sample_app.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,10 @@ namespace sample_app
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();// ACtivate all the object or service require to understand ctrl and views
+
+            // Activate Objects from ProductInMemory Or ProductOracle
+            //AddScoped : Explained Tomorrow
+            services.AddScoped<IStoreRepository, ProductIOracleepository>();
 
         }
 

@@ -1,1 +1,14 @@
-﻿<h1> This is Customer Index Page</h1>
+﻿@model IEnumerable<sample_app.Models.Customer>
+
+<h2>  Customer Information  </h2>
+@*<ul>
+        <li>  @Model.CustomerId</li>
+        <li> @Model.CustomerName</li>
+        <li>  @Model.Address</li>
+    </ul>*@
+<ul>
+    @foreach (var cust in Model)
+    {
+        <li>  @cust.CustomerName</li>
+    }
+</ul>

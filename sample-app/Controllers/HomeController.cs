@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using sample_app.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,21 +7,24 @@ using System.Threading.Tasks;
 
 namespace sample_app.Controllers
 {
-    // Controller its base class for Controller
-    // it gives the capability to HomeCtrl To Return View Or Page
-    //  ViewResult, JsonResult, PartialView
-
-    // Controller class : ControllerBase : that is used in the REST API
-
+   
+    
     public class HomeController : Controller
     {
-        // Action Methods
-        // IActionResult : It can Return Multiple Types
-        // String Page, File, JSON , Route,RedirectoAction 
+        private readonly IStoreRepository _repository;
+
+        // Ctor Injection
+        public HomeController(IStoreRepository repository)
+        {
+            _repository = repository;
+        }
+        // Display Product Information
         public IActionResult Index()
         {
-             return View(); //Page       
-        }       
+            var products = _repository.Products;
+            //Product
+            return View(products); //Page       
+        }
 
         public IActionResult AboutUs()
         {
@@ -31,7 +35,6 @@ namespace sample_app.Controllers
         {
             return View(); //Page
         }
-
 
     }
 }
