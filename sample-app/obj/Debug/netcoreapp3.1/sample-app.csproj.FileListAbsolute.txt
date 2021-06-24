@@ -32,3 +32,7 @@ D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.RazorTargetAssemblyInfo.cs
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.Views.pdb
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.csproj.CopyComplete
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs

@@ -21,8 +21,21 @@ namespace sample_app
             services.AddControllersWithViews();// ACtivate all the object or service require to understand ctrl and views
 
             // Activate Objects from ProductInMemory Or ProductOracle
-            //AddScoped : Explained Tomorrow
-            services.AddScoped<IStoreRepository, ProductIOracleepository>();
+            //AddScoped : Per Request Object Creation
+            services.AddScoped<IStoreRepository, ProductInMemoryRepository>();
+
+            // Per Request : One Object :  DB Service Object ,Identity Service
+            services.AddScoped<IRandomService, RandomService>(); // Activate
+            services.AddScoped<IRandomWrapper, RandomWrapper>(); // Activate
+
+            // All Request : Single Object .. In Memory Db  Or Shared DB
+            //services.AddSingleton<IRandomService, RandomService>(); // Activate
+            //services.AddSingleton<IRandomWrapper, RandomWrapper>(); // Activate
+
+            // Transient : Calculation logic
+            // Everytime it resolves :  it creates a new Object
+            //services.AddTransient<IRandomService, RandomService>(); // Activate
+            //services.AddTransient<IRandomWrapper, RandomWrapper>(); // Activate
 
         }
 

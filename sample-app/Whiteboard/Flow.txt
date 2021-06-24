@@ -48,12 +48,23 @@ MVC
   - All the Depednet objects are provided from outside
  -  Interface, Class , ctro Injection , service.AddScoped : To point Interface to apporpriate class
 
-
-
-
-
-
-
   Problem  
    - Intellisense
  2. ViewData :  is Equivalent to ViewBag and its old way.
+
+ Day 4
+  - DI  Service LifeTime Scope
+  1. Singleton :  Single Object
+  2. Scoped :  Per Request
+  3. Transient : Everytime Its resolved
+
+  Layout
+   - MasterPage 
+   - RenderBody : ContentPlaceholder
+   - ViewStart.cshtml :  To apply Layout page to all views
+
+ ViewImport. cshtml => To make available path of the folder to every view that contains a model
+
+ 
+
+
