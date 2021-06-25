@@ -10,5 +10,10 @@ namespace sample_app.Models
     {
         // Return a List Of Product
         IEnumerable<Product> Products { get; }
+        Product GetProductById(int id);
+        void AddProduct(Product product);
+        bool DeleteProduct(int id);
+
+        bool UpdateProduct(Product product);
     }
 }

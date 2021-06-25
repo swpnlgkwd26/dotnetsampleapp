@@ -1,18 +1,23 @@
 ﻿@model  IEnumerable<Product> 
 
+<a asp-action="Create" asp-controller="Home" class="btn btn-primary">
+    Add New Product</a>
 
 @foreach (var p in Model)
 {
    <div class="card card-outline-primary m-1 p-1">
        <div class="bg-faded p-1">
            <h4>
-
-               @*home/details .... href.. When we to navigate to another page instread of usig href TagHelpers*@
-               <a href="home/details"> @p.Name</a>
+               <a asp-action="details" asp-controller="home"
+                  asp-route-id="@p.ProductId"> @p.Name</a>
                <span class="badge badge-pill badge-primary" style="float:right">
                    <small>@p.Price.ToString("c")</small>
                </span>
            </h4>
+           <a asp-action="Delete" asp-controller="Home" asp-route-id="@p.ProductId" 
+              class="btn btn-danger">Delete</a>
+           <a asp-action="Update" asp-controller="Home" asp-route-id="@p.ProductId"
+              class="btn btn-warning">Update</a>
        </div>
        <div class="card-text p-1">@p.Description</div>
    </div>

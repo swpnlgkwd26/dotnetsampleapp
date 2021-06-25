@@ -65,6 +65,8 @@ MVC
 
  ViewImport. cshtml => To make available path of the folder to every view that contains a model
 
+ Day 5
+
  
 
 

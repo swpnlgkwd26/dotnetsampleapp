@@ -80,7 +80,7 @@ namespace sample_app
 
             app.UseEndpoints(endpoints =>
             {
-                // Default URL :   http://localhost/home/index
+                // Default URL :   http://localhost/home/details/1
                 endpoints.MapDefaultControllerRoute(); // routing  ..
                 
             });

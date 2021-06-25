@@ -41,5 +41,40 @@ namespace sample_app.Models
         // Return a Products
         public IEnumerable<Product> Products =>
             products;
+
+        public void AddProduct(Product product)
+        {
+            products.Add(product);
+        }
+
+        public bool DeleteProduct(int id)
+        {
+            // Find Product that i want to remove
+            var product = products.Find(x => x.ProductId == id);
+            products.Remove(product);
+            return true;
+        }
+
+        public Product GetProductById(int id)
+        {
+            // Find Product By ID and Return it
+            var product = products.Find(x => x.ProductId == id);
+            return product;
+        }
+
+        public bool UpdateProduct(Product product)
+        {
+            // Find the Product
+            var productToUpdate = products.Find(x => x.ProductId == product.ProductId);
+
+            productToUpdate.ProductId = product.ProductId;
+            productToUpdate.Name = product.Name;
+            productToUpdate.Price = product.Price;
+            productToUpdate.Category = product.Category;
+            productToUpdate.Description = product.Description;
+            productToUpdate.MfgDate = product.MfgDate;
+
+            return true;
+        }
     }
 }

@@ -20,7 +20,7 @@ using sample_app.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4554f7bb1451c8b7c4b7ca95742a30cb26fc9bad", @"/Views/Home/Aboutus.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"260ce991075f9b404b5f8e72b49452a8f56f59f8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"82fc01505b2f95df86602bf6a5c1788c3c201004", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Aboutus : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
