@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using sample_app.Extensions;
+using sample_app.Middlewares;
 using sample_app.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -57,13 +60,25 @@ namespace sample_app
                 RequestPath = "/files"
             });
 
+            // Extension Method : Best Practice
+            app.UseRequestCulture();  // Culture Set it to What we passed
+
+            // Next Middleware
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync($"Hello :  + { CultureInfo.CurrentCulture.DisplayName}");
+            });
+
+
+
+
             //// Using Use and Run Method to Create Middleware
             //app.Use(async (context, next) =>
             //{
             //    await context.Response.WriteAsync("First Middleware");
             //    await next.Invoke();
             //});            
-            
+
             //app.Use(async (context, next) =>
             //{
             //    await context.Response.WriteAsync("Second Middleware");
@@ -84,6 +99,7 @@ namespace sample_app
                 endpoints.MapDefaultControllerRoute(); // routing  ..
                 
             });
+
         }
     }
 }

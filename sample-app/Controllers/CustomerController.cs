@@ -11,6 +11,8 @@ namespace sample_app.Controllers
     {
         public IActionResult Index()
         {
+            // Logic
+
             // Mocking the Data  : Lets say i have Customer information
             // ViewBag to Store
 

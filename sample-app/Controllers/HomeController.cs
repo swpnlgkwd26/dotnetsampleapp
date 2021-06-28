@@ -26,6 +26,7 @@ namespace sample_app.Controllers
         // Display Product Information
         public IActionResult Index()
         {
+            // Logic :  Localization
             var products = _repository.Products;
 
             // string result = "Random Number From Random Service =" +_randomService.GetNumber();
