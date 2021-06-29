@@ -66,7 +66,38 @@ MVC
  ViewImport. cshtml => To make available path of the folder to every view that contains a model
 
  Day 5
+ Custom middleware
 
+
+ Day 7
+  - Model Validation
+
+   1. Data annotations :  Way of adding validation logic in our application
+
+   Attributes
+   1. Required , Range, CC,Email..... . Add this attribute in class
+   2. you need to use Modelstate.Isvalid :  this check whether the sTate of the model is valid or not and then
+   only execute a logic
+   3.  Add Validation Messages
+
+   Best Practive
+    - View should never be attached directly to model
+    - We should use ViewModel Layer
+    - View should directly communicate only to view model .. then this view model
+     is converted into model required in Data access logic
  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

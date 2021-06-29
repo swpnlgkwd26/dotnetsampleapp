@@ -1,4 +1,4 @@
-﻿@model Product
+﻿@model  ProductAddViewModel
 <h3>  Add New Product</h3>
 @*Product Object*@
 <form asp-action="Create" asp-controller="Home">
@@ -8,29 +8,35 @@
                placeholder="Product Id" />
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Name">Name</label>
+        <label asp-for="@Model.Name"></label>
         <input type="text" asp-for="@Model.Name" class="form-control"
                placeholder="Product Name" />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="@Model.Price">Price</label>
         <input type="text" asp-for="@Model.Price" class="form-control"
                placeholder="Price" />
+        <span asp-validation-for="@Model.Price" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="@Model.Category">Category</label>
         <input type="text" asp-for="@Model.Category" class="form-control"
                placeholder="Category" />
+
+        <span asp-validation-for="@Model.Category" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="@Model.Description">Description</label>
         <input type="text" asp-for="@Model.Description" class="form-control"
                placeholder="Description" />
+        <span asp-validation-for="@Model.Description" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="@Model.MfgDate">Mfg Date</label>
         <input type="text" asp-for="@Model.MfgDate" class="form-control"
                placeholder="Mfg Date" />
+        <span asp-validation-for="@Model.MfgDate" class="text-danger"></span>
     </div>
 
     <button class="btn btn-primary"  type="submit"> Submit</button>

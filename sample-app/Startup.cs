@@ -64,10 +64,10 @@ namespace sample_app
             app.UseRequestCulture();  // Culture Set it to What we passed
 
             // Next Middleware
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync($"Hello :  + { CultureInfo.CurrentCulture.DisplayName}");
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync($"Hello :  + { CultureInfo.CurrentCulture.DisplayName}");
+            //});
 
 
 

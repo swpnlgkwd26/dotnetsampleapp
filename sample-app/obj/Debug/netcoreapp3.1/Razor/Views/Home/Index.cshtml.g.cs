@@ -19,8 +19,15 @@ using sample_app.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Views\_ViewImports.cshtml"
+using sample_app.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"75b35a6f5bbfe5c0b8e30790fa3844c996b8125e", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"82fc01505b2f95df86602bf6a5c1788c3c201004", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bacdee46105903011516396e6f42d18816c8bb52", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Product>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -57,7 +64,7 @@ using sample_app.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b35a6f5bbfe5c0b8e30790fa3844c996b8125e5782", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b35a6f5bbfe5c0b8e30790fa3844c996b8125e5978", async() => {
                 WriteLiteral("\r\n    Add New Product");
             }
             );
@@ -85,7 +92,7 @@ using sample_app.Models;
 #line hidden
 #nullable disable
             WriteLiteral("   <div class=\"card card-outline-primary m-1 p-1\">\r\n       <div class=\"bg-faded p-1\">\r\n           <h4>\r\n               ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b35a6f5bbfe5c0b8e30790fa3844c996b8125e7601", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b35a6f5bbfe5c0b8e30790fa3844c996b8125e7797", async() => {
                 WriteLiteral(" ");
 #nullable restore
 #line 12 "D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Views\Home\Index.cshtml"
@@ -133,7 +140,7 @@ using sample_app.Models;
 #line hidden
 #nullable disable
             WriteLiteral("</small>\r\n               </span>\r\n           </h4>\r\n           ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b35a6f5bbfe5c0b8e30790fa3844c996b8125e10594", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b35a6f5bbfe5c0b8e30790fa3844c996b8125e10790", async() => {
                 WriteLiteral("Delete");
             }
             );
@@ -167,7 +174,7 @@ using sample_app.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n           ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b35a6f5bbfe5c0b8e30790fa3844c996b8125e13071", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b35a6f5bbfe5c0b8e30790fa3844c996b8125e13267", async() => {
                 WriteLiteral("Update");
             }
             );

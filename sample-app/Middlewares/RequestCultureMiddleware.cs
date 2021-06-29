@@ -31,9 +31,9 @@ namespace sample_app.Middlewares
                 CultureInfo.CurrentUICulture = cultureName; // Convert // DateFormat CurrenCy format
                 
             }
-            // Call Next Middleware
+            // Call Next Middleware            
             await _next(context);
-
         }
+        
     }
 }
