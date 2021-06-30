@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using sample_app.Models;
 using sample_app.ViewModels;
 using System;
@@ -8,18 +9,24 @@ using System.Threading.Tasks;
 
 namespace sample_app.Controllers
 {
+   
     public class HomeController : Controller
     {
+
         private readonly IStoreRepository _repository;
         private readonly IRandomService _randomService;
         private readonly IRandomWrapper _randomWrapper;
+        private readonly IMapper _mapper;
+
         // Ctor Injection
         public HomeController(IStoreRepository repository,
-            IRandomService randomService, IRandomWrapper randomWrapper)
+            IRandomService randomService, IRandomWrapper randomWrapper
+            , IMapper mapper)
         {
             _repository = repository;
             _randomService = randomService;
             _randomWrapper = randomWrapper;
+            _mapper = mapper;
         }
         // Display Product Information
         public IActionResult Index()
@@ -62,23 +69,12 @@ namespace sample_app.Controllers
             // if Model is valid
             if (ModelState.IsValid)
             {
-                // View is Returnning ProductAddViewModel
-                Product product = new Product
-                {
-                    Name = productAddViewModel.Name,
-                    Category = productAddViewModel.Category,
-                    Description = productAddViewModel.Description,
-                    MfgDate = productAddViewModel.MfgDate,
-                    Price= productAddViewModel.Price,
-                    ProductId =  productAddViewModel.ProductId
-                };
-                // Data Access Logic Product Class
-
+                var product = _mapper.Map<Product>(productAddViewModel);
                 _repository.AddProduct(product); // AddProduct : Product
                 return RedirectToAction("Index", "Home");
             }
             return View();
-            
+
         }
         public IActionResult Delete(int id)
         {
@@ -88,37 +84,34 @@ namespace sample_app.Controllers
         public IActionResult Update(int id)
         {
             // Find the Data by Id and then pass it to View
-            var product = _repository.GetProductById(id); // Product Object
-            ProductEditViewModel productEditViewModel = new ProductEditViewModel
-            {
-                Name = product.Name,
-                Category = product.Category,
-                Description = product.Description,
-                MfgDate = product.MfgDate,
-                Price = product.Price,
-                ProductId = product.ProductId
-            };
-            return View(productEditViewModel); // ProductEditViewModel
+            var product = _repository.GetProductById(id); // Product Object : Model
+                                                          // Product => ProductEditViewModel
+            var productEditViewModel = _mapper.Map<ProductEditViewModel>(product);
+            return View(productEditViewModel); // ProductEditViewModel : VM
         }
+
         [HttpPost]
         public IActionResult Update(ProductEditViewModel productEditViewModel)
         {
             if (ModelState.IsValid)
             {
-                Product product = new Product
-                {
-                    Name = productEditViewModel.Name,
-                    Category = productEditViewModel.Category,
-                    Description = productEditViewModel.Description,
-                    MfgDate = productEditViewModel.MfgDate,
-                    Price = productEditViewModel.Price,
-                    ProductId = productEditViewModel.ProductId
-                };
+                var product = _mapper.Map<Product>(productEditViewModel);
                 _repository.UpdateProduct(product);
                 return RedirectToAction("Index", "Home");
             }
             return View();
-          
+        }
+
+        // Server Side Method that will validate whether 
+        // Category is ...
+        public IActionResult VerifyCategory(string category)
+        {
+            // if Category  Chess/Cricket/Soccer true
+            if (category == "Soccer" || category == "Chess" || category == "Cricket")
+            {
+                return Json(true);
+            }
+            return Json("Only Cricket/Soccer/Chess allowed in Category");
         }
 
     }

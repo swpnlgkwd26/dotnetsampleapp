@@ -40,6 +40,10 @@ namespace sample_app
             //services.AddTransient<IRandomService, RandomService>(); // Activate
             //services.AddTransient<IRandomWrapper, RandomWrapper>(); // Activate
 
+            // Activat Automapper
+            // In the Current Assembly
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

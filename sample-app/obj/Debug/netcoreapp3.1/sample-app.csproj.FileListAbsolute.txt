@@ -48,3 +48,5 @@ D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Home\Update.cshtml.g.cs
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

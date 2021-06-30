@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,7 +9,6 @@ namespace sample_app.ViewModels
 {
     public class ProductAddViewModel
     {
-
         public int ProductId { get; set; }
 
         [Required(ErrorMessage = "Name is Required")]
@@ -16,6 +16,7 @@ namespace sample_app.ViewModels
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Category is Required")]
+        [Remote(action: "VerifyCategory", controller: "Home")]
         public string Category { get; set; }
 
         [Required(ErrorMessage = "Description is Required")]
@@ -28,6 +29,7 @@ namespace sample_app.ViewModels
         public int Price { get; set; }
 
         [Required(ErrorMessage = "MfgDate is Required")]
+
         public DateTime MfgDate { get; set; }
     }
 }
