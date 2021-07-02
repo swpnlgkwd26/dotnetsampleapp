@@ -1,0 +1,242 @@
+2021-07-02 09:50:43.6331 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 09:50:43.7463 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 09:50:43.7574 - Hosting environment: Development -            
+
+2021-07-02 09:50:43.7574 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 09:56:24.9457 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 09:56:25.0204 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 09:56:25.0204 - Hosting environment: Development -            
+
+2021-07-02 09:56:25.0388 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 09:56:28.7545 - Product Received -            
+
+2021-07-02 09:56:28.9845 - Product Pass to View -            
+
+2021-07-02 09:56:34.0813 - Product Received from Get Product By Id Method -            
+
+2021-07-02 09:56:43.4334 - Product Received -            
+
+2021-07-02 09:56:43.4390 - Product Pass to View -            
+
+2021-07-02 09:57:04.7184 - Model State is Valid -            
+
+2021-07-02 09:57:13.8056 - Product Received -            
+
+2021-07-02 09:57:13.8354 - Product Pass to View -            
+
+2021-07-02 09:57:34.0439 - Product Deleted for Id 1 -            
+
+2021-07-02 09:57:34.0979 - Product Received -            
+
+2021-07-02 09:57:34.0979 - Product Pass to View -            
+
+2021-07-02 09:57:48.5970 - Model State is Valid  -            
+
+2021-07-02 09:57:48.6191 - Product Received -            
+
+2021-07-02 09:57:48.6303 - Product Pass to View -            
+
+2021-07-02 10:15:52.0477 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:15:52.1194 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:15:52.1610 - Hosting environment: Development -            
+
+2021-07-02 10:15:52.1747 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:15:55.6060 - Product Received -            
+
+2021-07-02 10:15:55.7714 - Product Pass to View -            
+
+2021-07-02 10:15:58.6664 - Product Received from Get Product By Id Method -            
+
+2021-07-02 10:19:51.3807 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:19:51.5289 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:19:51.5448 - Hosting environment: Development -            
+
+2021-07-02 10:19:51.5655 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:19:54.6310 - Product Received -            
+
+2021-07-02 10:19:54.7616 - Product Pass to View -            
+
+2021-07-02 10:20:34.0916 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:20:34.1914 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:20:34.1914 - Hosting environment: Development -            
+
+2021-07-02 10:20:34.2108 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:20:37.4528 - Product Received -            
+
+2021-07-02 10:20:37.5927 - Product Pass to View -            
+
+2021-07-02 10:21:12.7318 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:21:12.9759 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:21:13.0122 - Hosting environment: Development -            
+
+2021-07-02 10:21:13.0301 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:21:15.9815 - Product Received -            
+
+2021-07-02 10:21:16.1532 - Product Pass to View -            
+
+2021-07-02 10:21:23.9315 - An unhandled exception has occurred while executing the request. -               at sample_app.Controllers.HomeController.AboutUs() in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Controllers\HomeController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at sample_app.Middlewares.RequestCultureMiddleware.InvokeAsync(HttpContext context) in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Middlewares\RequestCultureMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2021-07-02 10:27:27.5805 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:27:27.6454 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:27:27.6454 - Hosting environment: Development -            
+
+2021-07-02 10:27:27.6661 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:27:31.1080 - Product Received -            
+
+2021-07-02 10:27:31.2471 - Product Pass to View -            
+
+2021-07-02 10:27:38.0648 - An unhandled exception has occurred while executing the request. -               at sample_app.Controllers.HomeController.AboutUs() in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Controllers\HomeController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at sample_app.Middlewares.RequestCultureMiddleware.InvokeAsync(HttpContext context) in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Middlewares\RequestCultureMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2021-07-02 10:32:49.2969 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:32:49.5826 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:32:49.6129 - Hosting environment: Development -            
+
+2021-07-02 10:32:49.6485 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:32:53.2574 - Product Received -            
+
+2021-07-02 10:32:53.4580 - Product Pass to View -            
+
+2021-07-02 10:33:07.2824 - An unhandled exception has occurred while executing the request. -               at sample_app.Controllers.HomeController.AboutUs() in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Controllers\HomeController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at sample_app.Middlewares.RequestCultureMiddleware.InvokeAsync(HttpContext context) in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Middlewares\RequestCultureMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2021-07-02 10:34:17.9161 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:34:18.2031 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:34:18.2194 - Hosting environment: Production -            
+
+2021-07-02 10:34:18.2233 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:34:21.6123 - Product Received -            
+
+2021-07-02 10:34:21.7798 - Product Pass to View -            
+
+2021-07-02 10:34:30.2906 - An unhandled exception has occurred while executing the request. -               at sample_app.Controllers.HomeController.AboutUs() in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Controllers\HomeController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at sample_app.Middlewares.RequestCultureMiddleware.InvokeAsync(HttpContext context) in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Middlewares\RequestCultureMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-07-02 10:40:18.5339 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:40:18.6508 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:40:18.6701 - Hosting environment: Production -            
+
+2021-07-02 10:40:18.7183 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:40:21.9230 - Product Received -            
+
+2021-07-02 10:40:22.0412 - Product Pass to View -            
+
+2021-07-02 10:45:10.8899 - Now listening on: http://localhost:5000 -            
+
+2021-07-02 10:45:10.9807 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-02 10:45:10.9982 - Hosting environment: Production -            
+
+2021-07-02 10:45:11.0063 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-02 10:45:14.4617 - Product Received -            
+
+2021-07-02 10:45:14.6256 - Product Pass to View -            
+

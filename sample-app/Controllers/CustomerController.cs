@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using sample_app.Models;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,12 @@ namespace sample_app.Controllers
 {
     public class CustomerController : Controller
     {
+        private readonly ILogger<CustomerController> _logger;
+
+        public CustomerController(ILogger<CustomerController> logger)
+        {
+            _logger = logger;
+        }
         public IActionResult Index()
         {
             // Logic

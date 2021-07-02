@@ -49,10 +49,19 @@ namespace sample_app
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // We can execute code specific to environment
             if (env.IsDevelopment())
             {
+                // Show Developer Exception Page
                 app.UseDeveloperExceptionPage();
             }
+            else if (env.IsStaging() || env.IsProduction())
+            {
+                // Show Custom Error Page
+                app.UseExceptionHandler("/error"); //ctrl:error action :index
+
+            }
+            app.UseStatusCodePages();
             // Built In Middleware 
             // Serve  Static Files
             app.UseStaticFiles(); // Understand  wwwroot
@@ -100,7 +109,7 @@ namespace sample_app
             app.UseEndpoints(endpoints =>
             {
                 // Default URL :   http://localhost/home/details/1
-                endpoints.MapDefaultControllerRoute(); // routing  ..
+                endpoints.MapDefaultControllerRoute(); // ctrl :  home action :  index
                 
             });
 

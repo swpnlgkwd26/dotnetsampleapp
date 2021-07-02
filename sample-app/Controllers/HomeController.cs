@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using sample_app.Models;
 using sample_app.ViewModels;
 using System;
@@ -17,34 +18,37 @@ namespace sample_app.Controllers
         private readonly IRandomService _randomService;
         private readonly IRandomWrapper _randomWrapper;
         private readonly IMapper _mapper;
+        private readonly ILogger<HomeController> _logger;
 
         // Ctor Injection
         public HomeController(IStoreRepository repository,
             IRandomService randomService, IRandomWrapper randomWrapper
-            , IMapper mapper)
+            , IMapper mapper,ILogger<HomeController> logger)
         {
             _repository = repository;
             _randomService = randomService;
             _randomWrapper = randomWrapper;
             _mapper = mapper;
+            _logger = logger;
         }
         // Display Product Information
         public IActionResult Index()
         {
             // Logic :  Localization
             var products = _repository.Products;
-
+            _logger.LogInformation("Product Received");
             // string result = "Random Number From Random Service =" +_randomService.GetNumber();
             string result = $"Random Number From Random Service = { _randomService.GetNumber()} ," +
                 $" Random Wrapper  Number : {_randomWrapper.GetRandomNumberFromRandomService()}";
             ViewBag.Result = result;
-
+            _logger.LogInformation("Product Pass to View");
             //Product
             return View(products); //Page       
         }
         public IActionResult AboutUs()
         {
-            return View(); //Page
+            throw new Exception();
+           // return View(); //Page
         }
         public IActionResult Contact()
         {
@@ -56,6 +60,7 @@ namespace sample_app.Controllers
             // Product Select : infromation  We need to get and pass it to view.
 
             var product = _repository.GetProductById(id);
+            _logger.LogInformation("Product Received from Get Product By Id Method");
             return View(product);
 
         }
@@ -69,16 +74,19 @@ namespace sample_app.Controllers
             // if Model is valid
             if (ModelState.IsValid)
             {
+                _logger.LogInformation("Model State is Valid");
                 var product = _mapper.Map<Product>(productAddViewModel);
                 _repository.AddProduct(product); // AddProduct : Product
                 return RedirectToAction("Index", "Home");
             }
+            _logger.LogError("Model State is Invalid");
             return View();
 
         }
         public IActionResult Delete(int id)
         {
             _repository.DeleteProduct(id);
+            _logger.LogInformation("Product Deleted for Id "+ id);
             return RedirectToAction("Index", "Home");
         }
         public IActionResult Update(int id)
@@ -95,10 +103,12 @@ namespace sample_app.Controllers
         {
             if (ModelState.IsValid)
             {
+                _logger.LogInformation("Model State is Valid " );
                 var product = _mapper.Map<Product>(productEditViewModel);
                 _repository.UpdateProduct(product);
                 return RedirectToAction("Index", "Home");
             }
+            _logger.LogError("Model State is invalid during update operation for  "+productEditViewModel.ProductId);
             return View();
         }
 

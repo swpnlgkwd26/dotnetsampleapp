@@ -6,7 +6,6 @@ D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\sample-app.runtimeconfig.dev.json
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\sample-app.dll
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\sample-app.pdb
-D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.csprojAssemblyReference.cache
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.AssemblyInfoInputs.cache
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.AssemblyInfo.cs
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.csproj.CoreCompileInputs.cache
@@ -50,3 +49,9 @@ D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Home\Update.cshtml.g.cs
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\nlog.config
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\NLog.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.csprojAssemblyReference.cache
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Error\Index.cshtml.g.cs
