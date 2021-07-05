@@ -19,6 +19,22 @@ namespace sample_app.Models
                 Category="Chess",
                 Description="This is Chess Board"
             },
+            new Product
+            {
+                ProductId=11,
+                Name="Chess Board Again",
+                Price=23,
+                Category="Chess",
+                Description="This is Chess Board"
+            },
+            new Product
+            {
+                ProductId=12,
+                Name="Chess PAwns",
+                Price=23,
+                Category="Chess",
+                Description="This is Chess Board"
+            },
              new Product
             {
                 ProductId=2,

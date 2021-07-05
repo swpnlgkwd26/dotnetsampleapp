@@ -85,6 +85,10 @@ MVC
     - We should use ViewModel Layer
     - View should directly communicate only to view model .. then this view model
      is converted into model required in Data access logic
+
+    How to Pass Error throough JS
+    https://stackoverflow.com/questions/46150202/how-to-display-alert-message-box-in-asp-net-core-mvc-controller
+
  
 
 

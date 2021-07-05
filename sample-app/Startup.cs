@@ -66,7 +66,7 @@ namespace sample_app
             // Serve  Static Files
             app.UseStaticFiles(); // Understand  wwwroot
 
-            
+
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider($"{env.ContentRootPath}/kashishwwwroot"),
@@ -76,41 +76,50 @@ namespace sample_app
             // Extension Method : Best Practice
             app.UseRequestCulture();  // Culture Set it to What we passed
 
-            // Next Middleware
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync($"Hello :  + { CultureInfo.CurrentCulture.DisplayName}");
-            //});
-
-
-
-
-            //// Using Use and Run Method to Create Middleware
-            //app.Use(async (context, next) =>
-            //{
-            //    await context.Response.WriteAsync("First Middleware");
-            //    await next.Invoke();
-            //});            
-
-            //app.Use(async (context, next) =>
-            //{
-            //    await context.Response.WriteAsync("Second Middleware");
-            //    await next.Invoke();
-            //});
-
-            // Circuit Breaker :  Next Middleware will not be called.
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync("Broken   the Execution");
-            //});
-
+            // Routing Feature 2 Middlewares
+            // 1. UseRouting :  Select best match route
             app.UseRouting();
 
+            // 2. UseEndpoints : Contains Set of Endpoints
             app.UseEndpoints(endpoints =>
             {
-                // Default URL :   http://localhost/home/details/1
-                endpoints.MapDefaultControllerRoute(); // ctrl :  home action :  index
-                
+                // Conventional Routing
+                // http://localhost/Product/Page1 ..  http://localhost/Product/Page2
+                // User is not passing category he wants to iterate over all the products pagination wise
+                endpoints.MapControllerRoute("pagination", "Product/Page{productPage}", new
+                {
+                    controller = "Home",
+                    action = "Index"
+                });
+                endpoints.MapControllerRoute("paginationcategory", "{category}/Page{productPage}", new
+                {
+                    controller = "Home",
+                    action = "Index"
+                });
+                endpoints.MapControllerRoute("categorypage", "{category}", new
+                {
+                    controller = "Home",
+                    action = "Index"
+                });
+
+                // How to Create your own route
+                // Create Route Where User can pass Price as a parameter to the URL .that i want to print
+                endpoints.MapGet("/productinfo/{price}", async (context) =>
+                {
+                    var productPrice = context.Request.RouteValues["price"];
+                    await context.Response.WriteAsync("Hello  : " + productPrice);
+
+                });
+
+                endpoints.MapGet("/authorize/{username}", async (context) =>
+                {
+                    var userName = context.Request.RouteValues["username"];
+                    await context.Response.WriteAsync("Hello  : " + userName);
+                });
+
+                // Request : By default :  Controller Name = home, action=Index
+                endpoints.MapDefaultControllerRoute(); //home/index
+
             });
 
         }

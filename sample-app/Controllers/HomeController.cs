@@ -19,6 +19,7 @@ namespace sample_app.Controllers
         private readonly IRandomWrapper _randomWrapper;
         private readonly IMapper _mapper;
         private readonly ILogger<HomeController> _logger;
+        public int PageSize = 2;// Every Page will have 2 Products
 
         // Ctor Injection
         public HomeController(IStoreRepository repository,
@@ -31,11 +32,14 @@ namespace sample_app.Controllers
             _mapper = mapper;
             _logger = logger;
         }
-        // Display Product Information
-        public IActionResult Index()
+        // Display Product Information : Category : http://localhost/Chess
+        public IActionResult Index(string category,int productPage)
         {
-            // Logic :  Localization
-            var products = _repository.Products;
+           var  products = _repository.Products
+              .Where(p => category == null || p.Category == category)
+              .Skip((productPage - 1) * PageSize) 
+              .Take(PageSize); 
+
             _logger.LogInformation("Product Received");
             // string result = "Random Number From Random Service =" +_randomService.GetNumber();
             string result = $"Random Number From Random Service = { _randomService.GetNumber()} ," +
@@ -108,7 +112,7 @@ namespace sample_app.Controllers
                 _repository.UpdateProduct(product);
                 return RedirectToAction("Index", "Home");
             }
-            _logger.LogError("Model State is invalid during update operation for  "+productEditViewModel.ProductId);
+            _logger.LogError("Model State is invalid during update operation for  "+productEditViewModel.ProductId + ""+productEditViewModel.Name);
             return View();
         }
 
