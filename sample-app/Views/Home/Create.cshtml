@@ -1,4 +1,4 @@
-﻿@model  ProductAddViewModel
+﻿@model ProductAddViewModel
 <h3>  Add New Product</h3>
 @*Product Object*@
 <form asp-action="Create" asp-controller="Home">
@@ -38,6 +38,8 @@
                placeholder="Mfg Date" />
         <span asp-validation-for="@Model.MfgDate" class="text-danger"></span>
     </div>
-
-    <button class="btn btn-primary"  type="submit"> Submit</button>
+    <button class="btn btn-primary"
+            type="submit">
+        Submit
+    </button>
 </form>

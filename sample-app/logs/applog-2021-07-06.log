@@ -1,0 +1,498 @@
+2021-07-06 09:15:51.4501 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 09:15:51.5396 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 09:15:51.5707 - Hosting environment: Production -            
+
+2021-07-06 09:15:51.5790 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 09:16:07.3297 - Product Received -            
+
+2021-07-06 09:16:07.8185 - Product Pass to View -            
+
+2021-07-06 09:16:08.8560 - Product Received -            
+
+2021-07-06 09:16:08.8560 - Product Pass to View -            
+
+2021-07-06 09:16:33.3199 - Product Received -            
+
+2021-07-06 09:16:33.3238 - Product Pass to View -            
+
+2021-07-06 09:16:43.5904 - Product Received -            
+
+2021-07-06 09:16:43.5904 - Product Pass to View -            
+
+2021-07-06 09:16:51.8545 - Product Received -            
+
+2021-07-06 09:16:51.8545 - Product Pass to View -            
+
+2021-07-06 09:24:59.0651 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 09:24:59.1155 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 09:24:59.1243 - Hosting environment: Production -            
+
+2021-07-06 09:24:59.1385 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 09:25:02.0802 - Product Received -            
+
+2021-07-06 09:25:02.2156 - Product Pass to View -            
+
+2021-07-06 09:25:03.1766 - Product Received -            
+
+2021-07-06 09:25:03.2030 - Product Pass to View -            
+
+2021-07-06 09:25:11.2052 - Product Received -            
+
+2021-07-06 09:25:11.2052 - Product Pass to View -            
+
+2021-07-06 09:25:30.0074 - Product Received -            
+
+2021-07-06 09:25:30.0249 - Product Pass to View -            
+
+2021-07-06 09:27:08.9860 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 09:27:09.0638 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 09:27:09.0731 - Hosting environment: Production -            
+
+2021-07-06 09:27:09.0731 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 09:27:11.9138 - Product Received -            
+
+2021-07-06 09:27:12.0910 - Product Pass to View -            
+
+2021-07-06 09:27:12.9069 - Product Received -            
+
+2021-07-06 09:27:12.9069 - Product Pass to View -            
+
+2021-07-06 09:27:23.0313 - Product Received -            
+
+2021-07-06 09:27:23.0313 - Product Pass to View -            
+
+2021-07-06 09:27:38.4568 - Product Received -            
+
+2021-07-06 09:27:38.4667 - Product Pass to View -            
+
+2021-07-06 09:29:07.0368 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 09:29:07.0966 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 09:29:07.0966 - Hosting environment: Production -            
+
+2021-07-06 09:29:07.1139 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 09:29:10.2225 - Product Received -            
+
+2021-07-06 09:29:10.4278 - Product Pass to View -            
+
+2021-07-06 09:29:11.2829 - Product Received -            
+
+2021-07-06 09:29:11.2829 - Product Pass to View -            
+
+2021-07-06 09:29:23.6296 - An unhandled exception has occurred while executing the request. -               at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at sample_app.Middlewares.RequestCultureMiddleware.InvokeAsync(HttpContext context) in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Middlewares\RequestCultureMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-07-06 09:29:23.9727 - Product Received -            
+
+2021-07-06 09:29:23.9837 - Product Pass to View -            
+
+2021-07-06 09:31:37.1954 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 09:31:37.2878 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 09:31:37.2925 - Hosting environment: Production -            
+
+2021-07-06 09:31:37.2925 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 09:31:40.3308 - Product Received -            
+
+2021-07-06 09:31:40.5390 - Product Pass to View -            
+
+2021-07-06 09:31:41.3013 - Product Received -            
+
+2021-07-06 09:31:41.3013 - Product Pass to View -            
+
+2021-07-06 09:31:45.6118 - Product Received -            
+
+2021-07-06 09:31:45.6118 - Product Pass to View -            
+
+2021-07-06 09:31:45.9139 - Product Received -            
+
+2021-07-06 09:31:45.9174 - Product Pass to View -            
+
+2021-07-06 09:31:50.0227 - Product Received -            
+
+2021-07-06 09:31:50.0295 - Product Pass to View -            
+
+2021-07-06 09:31:50.3314 - Product Received -            
+
+2021-07-06 09:31:50.3314 - Product Pass to View -            
+
+2021-07-06 09:32:23.9370 - Product Received -            
+
+2021-07-06 09:32:23.9464 - Product Pass to View -            
+
+2021-07-06 09:32:24.3845 - Product Received -            
+
+2021-07-06 09:32:24.3845 - Product Pass to View -            
+
+2021-07-06 09:32:35.6989 - Product Received -            
+
+2021-07-06 09:32:35.6989 - Product Pass to View -            
+
+2021-07-06 09:32:36.1686 - Product Received -            
+
+2021-07-06 09:32:36.2150 - Product Pass to View -            
+
+2021-07-06 09:33:24.6554 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 09:33:24.7128 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 09:33:24.7128 - Hosting environment: Production -            
+
+2021-07-06 09:33:24.7128 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 09:33:28.0787 - Product Received -            
+
+2021-07-06 09:33:28.2331 - Product Pass to View -            
+
+2021-07-06 09:33:29.0104 - Product Received -            
+
+2021-07-06 09:33:29.0104 - Product Pass to View -            
+
+2021-07-06 09:33:36.1443 - Product Received -            
+
+2021-07-06 09:33:36.1443 - Product Pass to View -            
+
+2021-07-06 09:33:36.4385 - Product Received -            
+
+2021-07-06 09:33:36.4385 - Product Pass to View -            
+
+2021-07-06 09:33:39.7850 - Product Received -            
+
+2021-07-06 09:33:39.7899 - Product Pass to View -            
+
+2021-07-06 09:33:40.0874 - Product Received -            
+
+2021-07-06 09:33:40.0874 - Product Pass to View -            
+
+2021-07-06 09:33:44.6512 - Product Received -            
+
+2021-07-06 09:33:44.6512 - Product Pass to View -            
+
+2021-07-06 09:34:00.2905 - Product Received -            
+
+2021-07-06 09:34:00.2905 - Product Pass to View -            
+
+2021-07-06 09:34:00.6209 - Product Received -            
+
+2021-07-06 09:34:00.6209 - Product Pass to View -            
+
+2021-07-06 09:34:08.8361 - Product Received -            
+
+2021-07-06 09:34:08.8440 - Product Pass to View -            
+
+2021-07-06 09:34:09.4011 - Product Received -            
+
+2021-07-06 09:34:09.4011 - Product Pass to View -            
+
+2021-07-06 09:35:15.4655 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 09:35:15.6177 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 09:35:15.6544 - Hosting environment: Production -            
+
+2021-07-06 09:35:15.6762 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 09:35:18.3824 - Product Received -            
+
+2021-07-06 09:35:18.5218 - Product Pass to View -            
+
+2021-07-06 09:35:19.3084 - Product Received -            
+
+2021-07-06 09:35:19.3342 - Product Pass to View -            
+
+2021-07-06 09:35:42.7241 - Product Received -            
+
+2021-07-06 09:35:42.7284 - Product Pass to View -            
+
+2021-07-06 09:35:49.6739 - Product Received -            
+
+2021-07-06 09:35:49.6858 - Product Pass to View -            
+
+2021-07-06 09:43:21.7073 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 09:43:21.7600 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 09:43:21.7600 - Hosting environment: Production -            
+
+2021-07-06 09:43:21.7600 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 09:43:24.9441 - Product Received -            
+
+2021-07-06 09:43:25.0857 - Product Pass to View -            
+
+2021-07-06 09:43:26.0961 - Product Received -            
+
+2021-07-06 09:43:26.1107 - Product Pass to View -            
+
+2021-07-06 09:44:16.7045 - Product Received -            
+
+2021-07-06 09:44:16.7299 - Product Pass to View -            
+
+2021-07-06 09:44:17.0970 - Product Received -            
+
+2021-07-06 09:44:17.1031 - Product Pass to View -            
+
+2021-07-06 09:44:25.1761 - Product Received -            
+
+2021-07-06 09:44:25.1816 - Product Pass to View -            
+
+2021-07-06 09:44:25.7155 - Product Received -            
+
+2021-07-06 09:44:25.7155 - Product Pass to View -            
+
+2021-07-06 10:01:01.2449 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 10:01:01.2997 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 10:01:01.3082 - Hosting environment: Production -            
+
+2021-07-06 10:01:01.3280 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 10:01:04.8057 - Product Received -            
+
+2021-07-06 10:01:04.9672 - Product Pass to View -            
+
+2021-07-06 10:01:05.9370 - Product Received -            
+
+2021-07-06 10:01:05.9566 - Product Pass to View -            
+
+2021-07-06 10:36:32.5956 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 10:36:32.7065 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 10:36:32.7264 - Hosting environment: Production -            
+
+2021-07-06 10:36:32.7336 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 10:36:36.0780 - Product Received -            
+
+2021-07-06 10:36:36.2328 - Product Pass to View -            
+
+2021-07-06 10:36:37.1972 - Product Received -            
+
+2021-07-06 10:36:37.1972 - Product Pass to View -            
+
+2021-07-06 10:37:16.0653 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 10:37:16.2197 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 10:37:16.2917 - Hosting environment: Production -            
+
+2021-07-06 10:37:16.2917 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 10:37:20.0739 - Product Received -            
+
+2021-07-06 10:37:20.2558 - Product Pass to View -            
+
+2021-07-06 10:37:21.2724 - Product Received -            
+
+2021-07-06 10:37:21.2845 - Product Pass to View -            
+
+2021-07-06 10:37:25.4278 - Product Received -            
+
+2021-07-06 10:37:25.4356 - Product Pass to View -            
+
+2021-07-06 10:37:25.7753 - Product Received -            
+
+2021-07-06 10:37:25.7753 - Product Pass to View -            
+
+2021-07-06 10:37:26.5108 - Product Received -            
+
+2021-07-06 10:37:26.5108 - Product Pass to View -            
+
+2021-07-06 10:37:27.0227 - Product Received -            
+
+2021-07-06 10:37:27.1086 - Product Pass to View -            
+
+2021-07-06 10:38:06.3958 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 10:38:06.4945 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 10:38:06.5132 - Hosting environment: Production -            
+
+2021-07-06 10:38:06.5132 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 10:38:09.9164 - Product Received -            
+
+2021-07-06 10:38:10.1793 - Product Pass to View -            
+
+2021-07-06 10:38:11.0045 - Product Received -            
+
+2021-07-06 10:38:11.0045 - Product Pass to View -            
+
+2021-07-06 10:40:56.7054 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 10:40:56.7605 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 10:40:56.7605 - Hosting environment: Production -            
+
+2021-07-06 10:40:56.7750 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 10:40:59.9323 - Product Received -            
+
+2021-07-06 10:41:00.0946 - Product Pass to View -            
+
+2021-07-06 10:41:45.9115 - Product Received -            
+
+2021-07-06 10:41:45.9511 - Product Pass to View -            
+
+2021-07-06 10:42:07.3058 - Product Received -            
+
+2021-07-06 10:42:07.3249 - Product Pass to View -            
+
+2021-07-06 10:42:45.7590 - Product Received -            
+
+2021-07-06 10:42:45.7824 - Product Pass to View -            
+
+2021-07-06 10:43:03.7569 - Product Received -            
+
+2021-07-06 10:43:03.7810 - Product Pass to View -            
+
+2021-07-06 10:43:04.0977 - Product Received -            
+
+2021-07-06 10:43:04.1246 - Product Pass to View -            
+
+2021-07-06 10:43:05.8372 - Product Received -            
+
+2021-07-06 10:43:05.8372 - Product Pass to View -            
+
+2021-07-06 10:43:06.2610 - Product Received -            
+
+2021-07-06 10:43:06.2749 - Product Pass to View -            
+
+2021-07-06 10:43:07.2137 - Product Received -            
+
+2021-07-06 10:43:07.2137 - Product Pass to View -            
+
+2021-07-06 10:43:07.4936 - Product Received -            
+
+2021-07-06 10:43:07.4936 - Product Pass to View -            
+
+2021-07-06 10:43:08.9449 - Product Received -            
+
+2021-07-06 10:43:08.9606 - Product Pass to View -            
+
+2021-07-06 10:43:09.3719 - Product Received -            
+
+2021-07-06 10:43:09.3719 - Product Pass to View -            
+
+2021-07-06 10:43:11.1328 - Product Received -            
+
+2021-07-06 10:43:11.1452 - Product Pass to View -            
+
+2021-07-06 10:43:11.5757 - Product Received -            
+
+2021-07-06 10:43:11.5757 - Product Pass to View -            
+
+2021-07-06 10:43:14.5622 - Product Received -            
+
+2021-07-06 10:43:14.5741 - Product Pass to View -            
+
+2021-07-06 10:43:14.9079 - Product Received -            
+
+2021-07-06 10:43:14.9210 - Product Pass to View -            
+
+2021-07-06 10:43:17.5175 - Product Received -            
+
+2021-07-06 10:43:17.5277 - Product Pass to View -            
+
+2021-07-06 10:43:17.8615 - Product Received -            
+
+2021-07-06 10:43:17.8844 - Product Pass to View -            
+
+2021-07-06 10:43:19.7876 - Product Received -            
+
+2021-07-06 10:43:19.8017 - Product Pass to View -            
+
+2021-07-06 10:43:20.2467 - Product Received -            
+
+2021-07-06 10:43:20.2768 - Product Pass to View -            
+
+2021-07-06 10:43:21.5084 - Product Received -            
+
+2021-07-06 10:43:21.5149 - Product Pass to View -            
+
+2021-07-06 10:43:22.2343 - Product Received -            
+
+2021-07-06 10:43:22.2343 - Product Pass to View -            
+
+2021-07-06 10:43:22.7471 - Product Received -            
+
+2021-07-06 10:43:22.7617 - Product Pass to View -            
+
+2021-07-06 10:43:23.1179 - Product Received -            
+
+2021-07-06 10:43:23.1179 - Product Pass to View -            
+
+2021-07-06 10:43:27.1545 - Product Received -            
+
+2021-07-06 10:43:27.1545 - Product Pass to View -            
+
+2021-07-06 10:43:27.4414 - Product Received -            
+
+2021-07-06 10:43:27.4585 - Product Pass to View -            
+
+2021-07-06 10:43:28.5503 - Product Received -            
+
+2021-07-06 10:43:28.5608 - Product Pass to View -            
+
+2021-07-06 10:43:28.9715 - Product Received -            
+
+2021-07-06 10:43:28.9786 - Product Pass to View -            
+
+2021-07-06 10:43:30.4584 - Product Received -            
+
+2021-07-06 10:43:30.4768 - Product Pass to View -            
+
+2021-07-06 10:43:30.6922 - Product Received -            
+
+2021-07-06 10:43:30.6968 - Product Pass to View -            
+
+2021-07-06 10:44:00.9154 - Now listening on: http://localhost:5000 -            
+
+2021-07-06 10:44:01.0979 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-06 10:44:01.1517 - Hosting environment: Production -            
+
+2021-07-06 10:44:01.2136 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-06 10:44:05.0559 - Product Received -            
+
+2021-07-06 10:44:05.2307 - Product Pass to View -            
+
+2021-07-06 10:46:53.1599 - Product Received -            
+
+2021-07-06 10:46:53.1776 - Product Pass to View -            
+
+2021-07-06 10:46:55.2361 - Product Received -            
+
+2021-07-06 10:46:55.2361 - Product Pass to View -            
+
+2021-07-06 10:48:08.9560 - Product Received -            
+
+2021-07-06 10:48:08.9946 - Product Pass to View -            
+
+2021-07-06 11:01:18.3890 - Product Received -            
+
+2021-07-06 11:01:18.4403 - Product Pass to View -            
+

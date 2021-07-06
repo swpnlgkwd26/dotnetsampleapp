@@ -86,12 +86,13 @@ namespace sample_app
                 // Conventional Routing
                 // http://localhost/Product/Page1 ..  http://localhost/Product/Page2
                 // User is not passing category he wants to iterate over all the products pagination wise
-                endpoints.MapControllerRoute("pagination", "Product/Page{productPage}", new
+
+                endpoints.MapControllerRoute("pagination", "Product/Page{productPage:int}", new
                 {
                     controller = "Home",
                     action = "Index"
                 });
-                endpoints.MapControllerRoute("paginationcategory", "{category}/Page{productPage}", new
+                endpoints.MapControllerRoute("paginationcategory", "{category}/Page{productPage:int}", new
                 {
                     controller = "Home",
                     action = "Index"

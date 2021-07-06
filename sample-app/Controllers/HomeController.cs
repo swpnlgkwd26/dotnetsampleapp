@@ -33,21 +33,35 @@ namespace sample_app.Controllers
             _logger = logger;
         }
         // Display Product Information : Category : http://localhost/Chess
-        public IActionResult Index(string category,int productPage)
+        public IActionResult Index(string category,int productPage =1)
         {
+            // Product Infromation : Model11
            var  products = _repository.Products
               .Where(p => category == null || p.Category == category)
               .Skip((productPage - 1) * PageSize) 
-              .Take(PageSize); 
+              .Take(PageSize);
 
+            // Pagination Infromation : Model 2
+            var PagingInfo = new PagingInfo
+            {
+                CurrentPage= productPage,
+                ItemsPerPage= PageSize,
+                TotalItems=_repository.Products.Count()
+            };
+            var productListViewModel = new ProductListViewModel
+            {
+                Products = products,
+                 PagingInfo= PagingInfo
+
+            };
             _logger.LogInformation("Product Received");
             // string result = "Random Number From Random Service =" +_randomService.GetNumber();
             string result = $"Random Number From Random Service = { _randomService.GetNumber()} ," +
                 $" Random Wrapper  Number : {_randomWrapper.GetRandomNumberFromRandomService()}";
             ViewBag.Result = result;
             _logger.LogInformation("Product Pass to View");
-            //Product
-            return View(products); //Page       
+            //Product + PAgination
+            return View(productListViewModel); //Page       
         }
         public IActionResult AboutUs()
         {
