@@ -20,6 +20,7 @@ namespace sample_app.Controllers
         {
             return Content("Register Page");
         }
+
         [Route("Logout")]
         public IActionResult Logout()
         {

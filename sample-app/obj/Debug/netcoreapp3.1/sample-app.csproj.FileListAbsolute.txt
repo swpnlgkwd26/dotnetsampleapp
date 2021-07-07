@@ -55,3 +55,4 @@ D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.csprojAssemblyReference.cache
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Error\Index.cshtml.g.cs
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\NavigationMenu\Default.cshtml.g.cs

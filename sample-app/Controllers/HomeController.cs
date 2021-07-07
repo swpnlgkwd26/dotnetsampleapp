@@ -46,7 +46,8 @@ namespace sample_app.Controllers
             {
                 CurrentPage= productPage,
                 ItemsPerPage= PageSize,
-                TotalItems=_repository.Products.Count()
+                TotalItems= category ==null? _repository.Products.Count(): //Select Count(Product)
+                _repository.Products.Where(e=>e.Category == category).Count() // Select C(P) Where Cat= category
             };
             var productListViewModel = new ProductListViewModel
             {

@@ -89,6 +89,10 @@ MVC
     How to Pass Error throough JS
     https://stackoverflow.com/questions/46150202/how-to-display-alert-message-box-in-asp-net-core-mvc-controller
 
+
+  Navigational Component
+   -  Pagination 
+
  
 
 

@@ -86,22 +86,25 @@ namespace sample_app
                 // Conventional Routing
                 // http://localhost/Product/Page1 ..  http://localhost/Product/Page2
                 // User is not passing category he wants to iterate over all the products pagination wise
-
-                endpoints.MapControllerRoute("pagination", "Product/Page{productPage:int}", new
-                {
-                    controller = "Home",
-                    action = "Index"
-                });
                 endpoints.MapControllerRoute("paginationcategory", "{category}/Page{productPage:int}", new
                 {
                     controller = "Home",
                     action = "Index"
                 });
+
                 endpoints.MapControllerRoute("categorypage", "{category}", new
                 {
                     controller = "Home",
                     action = "Index"
                 });
+              
+                endpoints.MapControllerRoute("pagination", "Product/Page{productPage:int}", new
+                {
+                    controller = "Home",
+                    action = "Index"
+                });
+
+
 
                 // How to Create your own route
                 // Create Route Where User can pass Price as a parameter to the URL .that i want to print

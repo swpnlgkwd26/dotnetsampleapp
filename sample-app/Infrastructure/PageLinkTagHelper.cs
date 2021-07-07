@@ -34,6 +34,12 @@ namespace sample_app.Infrastructure
         // Whenever i click on the Links it should go to Some Action
         public string  PageAction { get; set; }
 
+        public bool PageClassesEnabled { get; set; }
+        public string  PageClassNormal { get; set; }
+        public string  PageClass { get; set; }
+
+        public string  PageClassSelected { get; set; }
+
         // Automatically called and will contain the Logic to Generate Links for us
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
@@ -46,6 +52,11 @@ namespace sample_app.Infrastructure
                 // Generate Link
                 TagBuilder tag = new TagBuilder("a"); // Generate anchor tag :<a href=""/>
                 tag.Attributes["href"] =urlHelper.Action(PageAction, new { productPage=i}) ;
+                if (PageClassesEnabled  )
+                {
+                    tag.AddCssClass(PageClass);
+                    tag.AddCssClass(i == PageModel.CurrentPage ? PageClassSelected : PageClassNormal);
+                }
                 tag.InnerHtml.Append(i.ToString());
                 result.InnerHtml.AppendHtml(tag);
             }
