@@ -94,7 +94,12 @@ MVC
    -  Pagination 
 
  
-
+ Entity Framework
+  -  What is Datacontext
+  -  Model
+  -  Pass ConnectionString
+  -  Perform CRUD Operations
+  -  DI
 
 
 

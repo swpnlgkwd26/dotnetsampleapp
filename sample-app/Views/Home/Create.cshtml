@@ -1,12 +1,7 @@
 ﻿@model ProductAddViewModel
 <h3>  Add New Product</h3>
 @*Product Object*@
-<form asp-action="Create" asp-controller="Home">
-    <div class="form-group">
-        <label asp-for="@Model.ProductId">Product Id</label>
-        <input type="text" asp-for="@Model.ProductId" class="form-control"
-               placeholder="Product Id" />
-    </div>
+<form asp-action="Create" asp-controller="Home">  
     <div class="form-group">
         <label asp-for="@Model.Name"></label>
         <input type="text" asp-for="@Model.Name" class="form-control"

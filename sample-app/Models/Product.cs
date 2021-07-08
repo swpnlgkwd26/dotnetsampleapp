@@ -8,11 +8,13 @@ namespace sample_app.Models
 {
     public class Product
     {
-        public int ProductId { get; set; }
+        [Key]
+        public int ProductId { get; set; }      
         public string Name { get; set; }
         public string Category { get; set; }
         public string Description { get; set; }
         public int Price { get; set; }
         public DateTime MfgDate { get; set; }
+
     }
 }

@@ -1,0 +1,593 @@
+2021-07-08 10:22:36.0650 - Now listening on: http://localhost:5000 -            
+
+2021-07-08 10:22:36.1767 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-08 10:22:36.2445 - Hosting environment: Production -            
+
+2021-07-08 10:22:36.2712 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-08 10:22:59.4373 - Product Received -            
+
+2021-07-08 10:25:36.9280 - Now listening on: http://localhost:5000 -            
+
+2021-07-08 10:25:37.0056 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-08 10:25:37.0139 - Hosting environment: Production -            
+
+2021-07-08 10:25:37.0139 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-08 10:25:42.8451 - Product Received -            
+
+2021-07-08 10:25:42.9322 - Product Pass to View -            
+
+2021-07-08 10:25:44.2211 - Product Received -            
+
+2021-07-08 10:25:44.2211 - Product Pass to View -            
+
+2021-07-08 10:25:49.7868 - Product Received -            
+
+2021-07-08 10:25:49.7868 - Product Pass to View -            
+
+2021-07-08 10:25:50.1708 - Product Received -            
+
+2021-07-08 10:25:50.1708 - Product Pass to View -            
+
+2021-07-08 10:25:52.4648 - Product Received -            
+
+2021-07-08 10:25:52.4728 - Product Pass to View -            
+
+2021-07-08 10:25:52.6652 - Product Received -            
+
+2021-07-08 10:25:52.6735 - Product Pass to View -            
+
+2021-07-08 10:25:54.3914 - Product Received -            
+
+2021-07-08 10:25:54.3914 - Product Pass to View -            
+
+2021-07-08 10:25:54.6959 - Product Received -            
+
+2021-07-08 10:25:54.7071 - Product Pass to View -            
+
+2021-07-08 10:25:56.0081 - Product Received -            
+
+2021-07-08 10:25:56.0168 - Product Pass to View -            
+
+2021-07-08 10:25:56.2381 - Product Received -            
+
+2021-07-08 10:25:56.2489 - Product Pass to View -            
+
+2021-07-08 10:26:49.5186 - Product Received -            
+
+2021-07-08 10:26:49.5186 - Product Pass to View -            
+
+2021-07-08 10:26:49.9718 - Product Received -            
+
+2021-07-08 10:26:49.9718 - Product Pass to View -            
+
+2021-07-08 10:26:52.3427 - Product Received -            
+
+2021-07-08 10:26:52.3427 - Product Pass to View -            
+
+2021-07-08 10:26:52.5972 - Product Received -            
+
+2021-07-08 10:26:52.5972 - Product Pass to View -            
+
+2021-07-08 10:26:53.9908 - Product Received -            
+
+2021-07-08 10:26:53.9908 - Product Pass to View -            
+
+2021-07-08 10:26:54.2863 - Product Received -            
+
+2021-07-08 10:26:54.2863 - Product Pass to View -            
+
+2021-07-08 10:26:55.7234 - Product Received -            
+
+2021-07-08 10:26:55.7234 - Product Pass to View -            
+
+2021-07-08 10:26:55.9830 - Product Received -            
+
+2021-07-08 10:26:55.9830 - Product Pass to View -            
+
+2021-07-08 10:26:58.1686 - Product Received -            
+
+2021-07-08 10:26:58.1754 - Product Pass to View -            
+
+2021-07-08 10:27:20.0901 - Model State is Valid -            
+
+2021-07-08 10:27:20.6318 - Failed executing DbCommand (258ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([ProductId], [Category], [Description], [MfgDate], [Name], [Price])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5); -            
+
+2021-07-08 10:27:20.8451 - An exception occurred in the database while saving changes for context type 'sample_app.Models.TataPowerDataContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Products' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:1bdf96a7-5794-49e1-b51b-3a9d0a623580
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess) -               at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+
+2021-07-08 10:28:59.5798 - Now listening on: http://localhost:5000 -            
+
+2021-07-08 10:28:59.6269 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-08 10:28:59.6269 - Hosting environment: Production -            
+
+2021-07-08 10:28:59.6420 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-08 10:29:05.7170 - Product Received -            
+
+2021-07-08 10:29:05.8559 - Product Pass to View -            
+
+2021-07-08 10:29:07.0251 - Product Received -            
+
+2021-07-08 10:29:07.0251 - Product Pass to View -            
+
+2021-07-08 10:29:11.5812 - Product Received -            
+
+2021-07-08 10:29:11.6113 - Product Pass to View -            
+
+2021-07-08 10:29:22.2192 - Model State is Valid -            
+
+2021-07-08 10:29:22.6299 - Product Received -            
+
+2021-07-08 10:29:22.6299 - Product Pass to View -            
+
+2021-07-08 10:29:22.8550 - Product Received -            
+
+2021-07-08 10:29:22.8645 - Product Pass to View -            
+
+2021-07-08 10:29:25.2455 - Product Received -            
+
+2021-07-08 10:29:25.2496 - Product Pass to View -            
+
+2021-07-08 10:29:25.4707 - Product Received -            
+
+2021-07-08 10:29:25.4857 - Product Pass to View -            
+
+2021-07-08 10:29:38.4547 - Product Received -            
+
+2021-07-08 10:29:38.4547 - Product Pass to View -            
+
+2021-07-08 10:29:44.8541 - Model State is Valid  -            
+
+2021-07-08 10:29:45.0083 - Product Received -            
+
+2021-07-08 10:29:45.0083 - Product Pass to View -            
+
+2021-07-08 10:29:45.2044 - Product Received -            
+
+2021-07-08 10:29:45.2426 - Product Pass to View -            
+
+2021-07-08 10:29:57.1010 - Product Received -            
+
+2021-07-08 10:29:57.1324 - Product Pass to View -            
+
+2021-07-08 10:29:57.4404 - Product Received -            
+
+2021-07-08 10:29:57.4404 - Product Pass to View -            
+
+2021-07-08 10:29:58.8195 - Product Deleted for Id 6 -            
+
+2021-07-08 10:29:58.8362 - Product Received -            
+
+2021-07-08 10:29:58.8362 - Product Pass to View -            
+
+2021-07-08 10:29:59.0215 - Product Received -            
+
+2021-07-08 10:29:59.0215 - Product Pass to View -            
+
+2021-07-08 10:30:01.6853 - Product Deleted for Id 2 -            
+
+2021-07-08 10:30:01.7005 - Product Received -            
+
+2021-07-08 10:30:01.7117 - Product Pass to View -            
+
+2021-07-08 10:30:01.9614 - Product Received -            
+
+2021-07-08 10:30:01.9614 - Product Pass to View -            
+
+2021-07-08 10:30:15.5183 - Product Received -            
+
+2021-07-08 10:30:15.5183 - Product Pass to View -            
+
+2021-07-08 10:30:15.7729 - Product Received -            
+
+2021-07-08 10:30:15.7729 - Product Pass to View -            
+
+2021-07-08 10:30:16.8094 - Product Received -            
+
+2021-07-08 10:30:16.8149 - Product Pass to View -            
+
+2021-07-08 10:30:17.0410 - Product Received -            
+
+2021-07-08 10:30:17.0526 - Product Pass to View -            
+
+2021-07-08 10:30:17.9911 - Product Received -            
+
+2021-07-08 10:30:17.9911 - Product Pass to View -            
+
+2021-07-08 10:30:18.2307 - Product Received -            
+
+2021-07-08 10:30:18.2424 - Product Pass to View -            
+
+2021-07-08 10:30:19.0587 - Product Received -            
+
+2021-07-08 10:30:19.0815 - Product Pass to View -            
+
+2021-07-08 10:30:19.2680 - Product Received -            
+
+2021-07-08 10:30:19.2680 - Product Pass to View -            
+
+2021-07-08 10:30:20.7694 - Product Received -            
+
+2021-07-08 10:30:20.7694 - Product Pass to View -            
+
+2021-07-08 10:30:39.8051 - Model State is Valid -            
+
+2021-07-08 10:30:39.8568 - Product Received -            
+
+2021-07-08 10:30:39.8632 - Product Pass to View -            
+
+2021-07-08 10:30:40.0673 - Product Received -            
+
+2021-07-08 10:30:40.0673 - Product Pass to View -            
+
+2021-07-08 10:30:41.8455 - Product Received -            
+
+2021-07-08 10:30:41.8455 - Product Pass to View -            
+
+2021-07-08 10:30:42.0923 - Product Received -            
+
+2021-07-08 10:30:42.0923 - Product Pass to View -            
+
+2021-07-08 10:30:44.5334 - Product Received -            
+
+2021-07-08 10:30:44.5334 - Product Pass to View -            
+
+2021-07-08 10:31:04.9840 - Model State is Valid -            
+
+2021-07-08 10:31:05.0581 - Product Received -            
+
+2021-07-08 10:31:05.0643 - Product Pass to View -            
+
+2021-07-08 10:31:05.3347 - Product Received -            
+
+2021-07-08 10:31:05.3456 - Product Pass to View -            
+
+2021-07-08 10:31:07.1622 - Product Received -            
+
+2021-07-08 10:31:07.1622 - Product Pass to View -            
+
+2021-07-08 10:31:07.3474 - Product Received -            
+
+2021-07-08 10:31:07.3474 - Product Pass to View -            
+
+2021-07-08 10:31:10.1315 - Product Received -            
+
+2021-07-08 10:31:10.1509 - Product Pass to View -            
+
+2021-07-08 10:31:44.7482 - Model State is Valid -            
+
+2021-07-08 10:31:44.7880 - Product Received -            
+
+2021-07-08 10:31:44.8003 - Product Pass to View -            
+
+2021-07-08 10:31:45.0100 - Product Received -            
+
+2021-07-08 10:31:45.0143 - Product Pass to View -            
+
+2021-07-08 10:31:48.6329 - Product Received -            
+
+2021-07-08 10:31:48.6416 - Product Pass to View -            
+
+2021-07-08 10:31:48.9545 - Product Received -            
+
+2021-07-08 10:31:48.9545 - Product Pass to View -            
+
+2021-07-08 10:32:01.6194 - Product Received -            
+
+2021-07-08 10:32:01.6333 - Product Pass to View -            
+
+2021-07-08 10:32:24.2399 - Product Received -            
+
+2021-07-08 10:32:24.2399 - Product Pass to View -            
+
+2021-07-08 10:32:24.5516 - Product Received -            
+
+2021-07-08 10:32:24.5516 - Product Pass to View -            
+
+2021-07-08 10:32:25.2701 - Product Received -            
+
+2021-07-08 10:32:25.2701 - Product Pass to View -            
+
+2021-07-08 10:32:25.5582 - Product Received -            
+
+2021-07-08 10:32:25.5661 - Product Pass to View -            
+
+2021-07-08 10:32:26.5118 - Product Received -            
+
+2021-07-08 10:32:26.5189 - Product Pass to View -            
+
+2021-07-08 10:32:26.8575 - Product Received -            
+
+2021-07-08 10:32:26.8646 - Product Pass to View -            
+
+2021-07-08 10:32:27.6514 - Product Received -            
+
+2021-07-08 10:32:27.6587 - Product Pass to View -            
+
+2021-07-08 10:32:27.8948 - Product Received -            
+
+2021-07-08 10:32:27.8948 - Product Pass to View -            
+
+2021-07-08 10:32:28.9390 - Product Received -            
+
+2021-07-08 10:32:28.9390 - Product Pass to View -            
+
+2021-07-08 10:32:29.2147 - Product Received -            
+
+2021-07-08 10:32:29.2302 - Product Pass to View -            
+
+2021-07-08 10:32:29.8079 - Product Received -            
+
+2021-07-08 10:32:29.8136 - Product Pass to View -            
+
+2021-07-08 10:32:30.0702 - Product Received -            
+
+2021-07-08 10:32:30.0777 - Product Pass to View -            
+
+2021-07-08 10:34:12.3539 - Product Received from Get Product By Id Method -            
+
+2021-07-08 10:34:12.5787 - Product Received -            
+
+2021-07-08 10:34:12.5787 - Product Pass to View -            
+
+2021-07-08 10:34:14.9478 - Product Received -            
+
+2021-07-08 10:34:14.9561 - Product Pass to View -            
+
+2021-07-08 10:34:15.2539 - Product Received -            
+
+2021-07-08 10:34:15.2702 - Product Pass to View -            
+
+2021-07-08 10:34:16.7295 - Product Received from Get Product By Id Method -            
+
+2021-07-08 10:34:16.9268 - Product Received -            
+
+2021-07-08 10:34:16.9374 - Product Pass to View -            
+
+2021-07-08 10:34:18.6851 - Product Received -            
+
+2021-07-08 10:34:18.6898 - Product Pass to View -            
+
+2021-07-08 10:34:18.8877 - Product Received -            
+
+2021-07-08 10:34:18.8994 - Product Pass to View -            
+
+2021-07-08 10:34:19.8554 - Product Received -            
+
+2021-07-08 10:34:19.8587 - Product Pass to View -            
+
+2021-07-08 10:34:20.0610 - Product Received -            
+
+2021-07-08 10:34:20.0610 - Product Pass to View -            
+
+2021-07-08 10:34:20.7540 - Product Received -            
+
+2021-07-08 10:34:20.7690 - Product Pass to View -            
+
+2021-07-08 10:34:20.9543 - Product Received -            
+
+2021-07-08 10:34:20.9543 - Product Pass to View -            
+
+2021-07-08 10:34:21.8780 - Product Received -            
+
+2021-07-08 10:34:21.8780 - Product Pass to View -            
+
+2021-07-08 10:34:22.0570 - Product Received -            
+
+2021-07-08 10:34:22.0686 - Product Pass to View -            
+
+2021-07-08 10:34:23.2022 - Product Received -            
+
+2021-07-08 10:34:23.2022 - Product Pass to View -            
+
+2021-07-08 10:34:23.3591 - Product Received -            
+
+2021-07-08 10:34:23.3591 - Product Pass to View -            
+
+2021-07-08 10:34:24.2082 - Product Received -            
+
+2021-07-08 10:34:24.2337 - Product Pass to View -            
+
+2021-07-08 10:34:24.4652 - Product Received -            
+
+2021-07-08 10:34:24.4725 - Product Pass to View -            
+
+2021-07-08 10:34:25.1092 - Product Received -            
+
+2021-07-08 10:34:25.1092 - Product Pass to View -            
+
+2021-07-08 10:34:25.3394 - Product Received -            
+
+2021-07-08 10:34:25.3533 - Product Pass to View -            
+
+2021-07-08 10:34:25.9118 - Product Received -            
+
+2021-07-08 10:34:25.9118 - Product Pass to View -            
+
+2021-07-08 10:34:26.0852 - Product Received -            
+
+2021-07-08 10:34:26.0852 - Product Pass to View -            
+
+2021-07-08 10:34:27.1958 - Product Received -            
+
+2021-07-08 10:34:27.1958 - Product Pass to View -            
+
+2021-07-08 10:34:27.3568 - Product Received -            
+
+2021-07-08 10:34:27.3611 - Product Pass to View -            
+
+2021-07-08 10:34:32.8822 - Product Received -            
+
+2021-07-08 10:34:32.8903 - Product Pass to View -            
+
+2021-07-08 10:34:33.1654 - Product Received -            
+
+2021-07-08 10:34:33.1654 - Product Pass to View -            
+
+2021-07-08 10:34:33.8639 - Product Received -            
+
+2021-07-08 10:34:33.8639 - Product Pass to View -            
+
+2021-07-08 10:34:34.0800 - Product Received -            
+
+2021-07-08 10:34:34.0936 - Product Pass to View -            
+
+2021-07-08 10:34:35.1551 - Product Received -            
+
+2021-07-08 10:34:35.1551 - Product Pass to View -            
+
+2021-07-08 10:34:35.3376 - Product Received -            
+
+2021-07-08 10:34:35.3427 - Product Pass to View -            
+
+2021-07-08 10:34:38.9788 - Product Received -            
+
+2021-07-08 10:34:38.9868 - Product Pass to View -            
+
+2021-07-08 10:34:39.2218 - Product Received -            
+
+2021-07-08 10:34:39.2218 - Product Pass to View -            
+
+2021-07-08 10:34:41.3459 - Product Received -            
+
+2021-07-08 10:34:41.3459 - Product Pass to View -            
+
+2021-07-08 10:34:41.5771 - Product Received -            
+
+2021-07-08 10:34:41.5771 - Product Pass to View -            
+
+2021-07-08 10:34:45.0615 - Product Received -            
+
+2021-07-08 10:34:45.0615 - Product Pass to View -            
+
+2021-07-08 10:34:45.3306 - Product Received -            
+
+2021-07-08 10:34:45.3306 - Product Pass to View -            
+
+2021-07-08 10:34:48.3352 - Product Received -            
+
+2021-07-08 10:34:48.3352 - Product Pass to View -            
+
+2021-07-08 10:34:48.5541 - Product Received -            
+
+2021-07-08 10:34:48.5541 - Product Pass to View -            
+
+2021-07-08 10:34:57.0643 - An unhandled exception has occurred while executing the request. -               at sample_app.Controllers.HomeController.AboutUs() in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Controllers\HomeController.cs:line 69
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at sample_app.Middlewares.RequestCultureMiddleware.InvokeAsync(HttpContext context) in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Middlewares\RequestCultureMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-07-08 10:34:57.9139 - Product Received -            
+
+2021-07-08 10:34:57.9305 - Product Pass to View -            
+
+2021-07-08 10:35:02.2633 - Product Received -            
+
+2021-07-08 10:35:02.2739 - Product Pass to View -            
+
+2021-07-08 10:35:02.5090 - Product Received -            
+
+2021-07-08 10:35:02.5347 - Product Pass to View -            
+
+2021-07-08 10:37:18.2903 - Now listening on: http://localhost:5000 -            
+
+2021-07-08 10:37:18.3411 - Application started. Press Ctrl+C to shut down. -            
+
+2021-07-08 10:37:18.3469 - Hosting environment: Production -            
+
+2021-07-08 10:37:18.3469 - Content root path: D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app -            
+
+2021-07-08 10:37:24.1264 - Product Received -            
+
+2021-07-08 10:37:24.2481 - Product Pass to View -            
+
+2021-07-08 10:37:25.1712 - Product Received -            
+
+2021-07-08 10:37:25.1712 - Product Pass to View -            
+
+2021-07-08 10:37:33.4861 - An unhandled exception has occurred while executing the request. -               at sample_app.Controllers.HomeController.AboutUs() in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Controllers\HomeController.cs:line 69
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at sample_app.Middlewares.RequestCultureMiddleware.InvokeAsync(HttpContext context) in D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Middlewares\RequestCultureMiddleware.cs:line 35
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-07-08 10:37:34.3688 - Product Received -            
+
+2021-07-08 10:37:34.3936 - Product Pass to View -            
+

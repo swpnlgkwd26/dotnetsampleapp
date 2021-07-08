@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
@@ -17,6 +19,15 @@ namespace sample_app
 {
     public class Startup
     {
+
+        public Startup(IConfiguration config)
+        {
+            Configuration = config;
+        }
+
+        // Talk to appsetting and get the connectionString
+        public IConfiguration Configuration { get; set; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
@@ -25,8 +36,9 @@ namespace sample_app
 
             // Activate Objects from ProductInMemory Or ProductOracle
             //AddScoped : Per Request Object Creation
-            services.AddScoped<IStoreRepository, ProductInMemoryRepository>();
-
+            //services.AddScoped<IStoreRepository, ProductInMemoryRepository>();
+            services.AddScoped<IStoreRepository, ProductSQLRepository>();
+            services.AddScoped<ICustomerRespository, CustomerSQLRespository>();
             // Per Request : One Object :  DB Service Object ,Identity Service
             services.AddScoped<IRandomService, RandomService>(); // Activate
             services.AddScoped<IRandomWrapper, RandomWrapper>(); // Activate
@@ -43,6 +55,12 @@ namespace sample_app
             // Activat Automapper
             // In the Current Assembly
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            // Pass Connection String to Data Context
+            services.AddDbContext<TataPowerDataContext>(options =>
+            {
+                options.UseSqlServer(Configuration["ConnectionStrings:ProductConnection"]);
+            });
 
         }
 
