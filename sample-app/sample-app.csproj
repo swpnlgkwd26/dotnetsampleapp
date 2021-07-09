@@ -18,4 +18,10 @@
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.13.0-readme-preview" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="KYC\Kashish\" />
+    <Folder Include="KYC\Deepanshu\" />
+    <Folder Include="KYC\Sachin\" />
+  </ItemGroup>
+
 </Project>

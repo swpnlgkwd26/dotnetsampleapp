@@ -17,7 +17,9 @@ namespace sample_app.Models
 
         public void AddCustomer(Customer customer)
         {
+            
             context.Customers.Add(customer);
+           
             context.SaveChanges();
         }
 

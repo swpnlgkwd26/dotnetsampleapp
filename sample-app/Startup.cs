@@ -12,6 +12,7 @@ using sample_app.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -62,6 +63,10 @@ namespace sample_app
                 options.UseSqlServer(Configuration["ConnectionStrings:ProductConnection"]);
             });
 
+            // Activate IFileProvider
+            IFileProvider physicalProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
+            services.AddSingleton<IFileProvider>(physicalProvider);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -82,7 +87,7 @@ namespace sample_app
             app.UseStatusCodePages();
             // Built In Middleware 
             // Serve  Static Files
-            app.UseStaticFiles(); // Understand  wwwroot
+            app.UseStaticFiles(); // Understand  wwwroot // FileProvider
 
 
             app.UseStaticFiles(new StaticFileOptions

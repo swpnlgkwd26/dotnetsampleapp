@@ -7,6 +7,14 @@
    asp-controller="Home" >
     AboutUS
 </a>
+<a class="btn btn-block btn-outline-secondary" asp-action="Contact"
+   asp-controller="Home">
+   Contact
+</a>
+<a class="btn btn-block btn-outline-secondary" asp-action="Index"
+   asp-controller="Customer">
+    Customer
+</a>
 @foreach (string category in Model)
 {
     <a class="btn btn-block btn-outline-secondary"

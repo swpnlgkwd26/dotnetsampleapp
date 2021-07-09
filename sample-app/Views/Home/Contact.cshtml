@@ -1,1 +1,32 @@
-﻿<h1> This is Contact Us Page</h1>
+﻿@model IDirectoryContents
+<h1> This is Contact Us Page :  KYC Information</h1>
+<h5> Folder Contents</h5>
+<ul>
+    @foreach (IFileInfo item in Model)
+    {
+        if (item.IsDirectory)
+        {
+            <li><strong>@item.Name</strong> - Directory</li>
+        }
+        else
+        {
+            <li><strong>@item.Name</strong> - File</li>
+        }
+
+    }
+</ul>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="FileUpload">
+    <div class="form-group">
+        <div class="col-md-10">
+            <p> Upload Files</p>
+            <input type="file" name="files" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Upload"/>
+        </div>
+    </div>
+</form>
+

@@ -26,8 +26,15 @@ using sample_app.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\Views\_ViewImports.cshtml"
+using Microsoft.Extensions.FileProviders;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4554f7bb1451c8b7c4b7ca95742a30cb26fc9bad", @"/Views/Home/Aboutus.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9d5ba2054354520637479692f6f732904c2c6e6b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2808b695109cead404ec139636cb14834b7bbf94", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Aboutus : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using sample_app.Models;
 using sample_app.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,18 +22,21 @@ namespace sample_app.Controllers
         private readonly IRandomWrapper _randomWrapper;
         private readonly IMapper _mapper;
         private readonly ILogger<HomeController> _logger;
+        private readonly IFileProvider _fileProvider;
         public int PageSize = 2;// Every Page will have 2 Products
 
         // Ctor Injection
         public HomeController(IStoreRepository repository,
             IRandomService randomService, IRandomWrapper randomWrapper
-            , IMapper mapper,ILogger<HomeController> logger)
+            , IMapper mapper,ILogger<HomeController> logger,
+            IFileProvider fileProvider)
         {
             _repository = repository;
             _randomService = randomService;
             _randomWrapper = randomWrapper;
             _mapper = mapper;
             _logger = logger;
+            _fileProvider = fileProvider;
         }
         // Display Product Information : Category : http://localhost/Chess
         public IActionResult Index(string category,int productPage =1)
@@ -71,8 +77,37 @@ namespace sample_app.Controllers
         }
         public IActionResult Contact()
         {
-            return View(); //Page
+            var directories = _fileProvider.GetDirectoryContents("KYC"); // 3 Folders
+            return View(directories); //Page
         }
+
+        // Accept that file as a Parameter
+        // IFormFile Represents a Single file coming from the application
+        [HttpPost]
+        public async Task<IActionResult> FileUpload(List<IFormFile> files)
+        {
+            long size = files.Sum(f => f.Length);
+            // Generate Paths for this files
+            var filePaths = new List<string>();
+            foreach (var formFile in files)
+            {
+                if (formFile.Length >  0)
+                {
+                    // Create a Path  :  CurrentDir +  KYC + fileName
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "KYC", formFile.FileName);
+                    filePaths.Add(path);
+
+                    // Generate or Copy file in above path.
+                    using (var stream =  new FileStream(path,FileMode.Create))
+                    {
+                        await formFile.CopyToAsync(stream);
+                    }
+                }
+            }
+
+            return Ok(new { count = files.Count, size, filePaths});
+        }
+
         public IActionResult Details(int id)
         {
             //Get the data related to this id and pass it to view to display
