@@ -178,5 +178,10 @@ namespace sample_app.Controllers
             return Json("Only Cricket/Soccer/Chess allowed in Category");
         }
 
+        public IActionResult CheckWebAPI()
+        {
+            return View();
+        }
+
     }
 }

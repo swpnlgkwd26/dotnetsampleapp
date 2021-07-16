@@ -1,0 +1,52 @@
+﻿
+<h2> Connect to Web API</h2>
+
+<button id="btnGetProduct" class="btn btn-primary"> Get Product From API</button>
+<input id="productID"/>
+<button id="btnGetProductById" class="btn btn-primary"> Get Product From API By ID</button>
+<ul id="ulProducts">
+    
+</ul>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Take a Ref of UL 
+        var ulProducts = $("#ulProducts");
+
+        //Check if the button is clicked and if its clicked then it will call
+        //API
+        $("#btnGetProduct").click(function () {
+            alert('Ajax Called');
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:5001/api/Products",
+                dataType: "json",
+                success: function (result) {                   
+                    $.each(result, function (index, val) {
+                        ulProducts.append("<li>" + val.name + "</li>");
+                    })                   
+                },
+                error: function (err) {
+                    alert("Not Found");
+                }
+            });
+        })
+
+        $("#btnGetProductById").click(function () {
+            var productId = $("#productID").val();
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:5001/api/Products/" + productId,
+                dataType: "json",
+                success: function (result) {   
+                    console.log(result);
+                    ulProducts.append("<li>" + result.productName + "</li>");                    
+                },
+                error: function (err) {
+                    alert("Not Found");
+                }
+            })
+
+        })
+    })
+</script>
