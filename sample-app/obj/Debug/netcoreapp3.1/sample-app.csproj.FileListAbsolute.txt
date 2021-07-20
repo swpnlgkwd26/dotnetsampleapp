@@ -53,7 +53,6 @@ D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\NLog.dll
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
-D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.csprojAssemblyReference.cache
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Error\Index.cshtml.g.cs
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\NavigationMenu\Default.cshtml.g.cs
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
@@ -97,3 +96,10 @@ D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Create.cshtml.g.cs
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Home\CheckWebAPI.cshtml.g.cs
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.csprojAssemblyReference.cache

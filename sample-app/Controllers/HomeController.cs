@@ -16,16 +16,14 @@ namespace sample_app.Controllers
    
     public class HomeController : Controller
     {
-
         private readonly IStoreRepository _repository;
         private readonly IRandomService _randomService;
         private readonly IRandomWrapper _randomWrapper;
         private readonly IMapper _mapper;
         private readonly ILogger<HomeController> _logger;
         private readonly IFileProvider _fileProvider;
-        public int PageSize = 2;// Every Page will have 2 Products
+        public int PageSize = 2;
 
-        // Ctor Injection
         public HomeController(IStoreRepository repository,
             IRandomService randomService, IRandomWrapper randomWrapper
             , IMapper mapper,ILogger<HomeController> logger,
@@ -38,7 +36,8 @@ namespace sample_app.Controllers
             _logger = logger;
             _fileProvider = fileProvider;
         }
-        // Display Product Information : Category : http://localhost/Chess
+       
+
         public IActionResult Index(string category,int productPage =1)
         {
             // Product Infromation : Model11
@@ -118,6 +117,7 @@ namespace sample_app.Controllers
             return View(product);
 
         }
+
         public IActionResult Create()
         {
             return View();
@@ -137,12 +137,14 @@ namespace sample_app.Controllers
             return View();
 
         }
+
         public IActionResult Delete(int id)
         {
             _repository.DeleteProduct(id);
             _logger.LogInformation("Product Deleted for Id "+ id);
             return RedirectToAction("Index", "Home");
         }
+
         public IActionResult Update(int id)
         {
             // Find the Data by Id and then pass it to View
@@ -151,7 +153,6 @@ namespace sample_app.Controllers
             var productEditViewModel = _mapper.Map<ProductEditViewModel>(product);
             return View(productEditViewModel); // ProductEditViewModel : VM
         }
-
         [HttpPost]
         public IActionResult Update(ProductEditViewModel productEditViewModel)
         {
@@ -166,8 +167,7 @@ namespace sample_app.Controllers
             return View();
         }
 
-        // Server Side Method that will validate whether 
-        // Category is ...
+       
         public IActionResult VerifyCategory(string category)
         {
             // if Category  Chess/Cricket/Soccer true

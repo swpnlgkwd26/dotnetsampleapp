@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using sample_app.Models;
 
 namespace sample_app.Migrations
 {
     [DbContext(typeof(TataPowerDataContext))]
-    partial class TataPowerDataContextModelSnapshot : ModelSnapshot
+    [Migration("20210720051552_createroles")]
+    partial class createroles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

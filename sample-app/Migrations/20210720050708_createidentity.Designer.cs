@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using sample_app.Models;
 
 namespace sample_app.Migrations
 {
     [DbContext(typeof(TataPowerDataContext))]
-    partial class TataPowerDataContextModelSnapshot : ModelSnapshot
+    [Migration("20210720050708_createidentity")]
+    partial class createidentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,22 +46,6 @@ namespace sample_app.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "b15df849-a4f2-4e8a-b46a-e9f184e77858",
-                            ConcurrencyStamp = "43b9c715-0a63-4dc0-ba92-014125f47504",
-                            Name = "User",
-                            NormalizedName = "User"
-                        },
-                        new
-                        {
-                            Id = "6fadfc2c-48e8-4935-b216-28c3184c4c8c",
-                            ConcurrencyStamp = "0ba0b71b-3ad5-4d76-adec-b5e1779ea689",
-                            Name = "Administrator",
-                            NormalizedName = "Administrator"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -16,6 +16,9 @@ namespace sample_app.MappingProfile
             CreateMap<ProductEditViewModel, Product>().ReverseMap();
             CreateMap<ProductAddViewModel, Product>().ReverseMap();
             CreateMap<CustomerAddModel, Customer>().ReverseMap();
+            CreateMap<RegisterViewModel, ApplicationUser>()
+                .ForMember(dest => dest.UserName,
+                opt => opt.MapFrom(src => src.Email));
         }
     }
 }
