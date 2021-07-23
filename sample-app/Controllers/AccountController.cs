@@ -17,16 +17,42 @@ namespace sample_app.Controllers
         // Manage the User
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IMapper _mapper;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public AccountController(UserManager<ApplicationUser> userManager, IMapper mapper)
+        public AccountController(UserManager<ApplicationUser> userManager,
+            IMapper mapper, SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
             _mapper = mapper;
+            _signInManager = signInManager;
         }
-        [Route("Login/{username:minlength(4)}/{password:minlength(4)}")]
-        public IActionResult Login(string username, string password)
+        [Route("Login")]
+        public IActionResult Login()
         {
-            return Content("Login Page");
+            return View();
+        }
+
+        [Route("Login")]
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel loginViewModel)
+        {
+            // Is the Model Valid : Return Login View
+            if (!ModelState.IsValid)
+            {
+                return View(loginViewModel);
+            }
+            // Logic For Login
+            var result = await _signInManager.PasswordSignInAsync(loginViewModel.Email,
+                loginViewModel.Password, false, false);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Invalid UserName and Password");
+                return View();
+            }
         }
 
 
@@ -49,10 +75,10 @@ namespace sample_app.Controllers
             // UserName Null
             var applicationUser = _mapper.Map<ApplicationUser>(register);
 
-            
+
 
             // While Creating UserName Mandatory
-            var result =await _userManager.CreateAsync(applicationUser, register.Password);
+            var result = await _userManager.CreateAsync(applicationUser, register.Password);
             if (!result.Succeeded)
             {
                 foreach (var error in result.Errors)
@@ -68,9 +94,10 @@ namespace sample_app.Controllers
         }
 
         [Route("Logout")]
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
-            return Content("Logout Page");
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Login", "Account");
         }
     }
 }

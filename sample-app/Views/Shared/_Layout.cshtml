@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿
+@inject SignInManager<ApplicationUser> _SignInManager;
+@*@inject User<ApplicationUser> _SignInManager;*@
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -10,16 +14,34 @@
 <body>
     <div class="bg-dark text-white p-2">
         <span class="navbar-brand ml-2">Shopping-Admin</span>
-        <span style="float:right">
-            <a class="btn btn-block btn-outline-secondary" asp-action="Register"
-               asp-controller="Account"> Register</a>
-        </span>
+        @if (!_SignInManager.IsSignedIn(User))
+        {
+            <span style="float:right">
+                <a class="btn btn-block btn-outline-secondary" asp-action="Register"
+                   asp-controller="Account"> Register</a>
+            </span>
+            <span style="float:right">
+                <a class="btn btn-block btn-outline-secondary" asp-action="Login"
+                   asp-controller="Account"> Login</a>
+            </span>
+        }
+        else
+        {
+            <span style="float:right">
+                <a class="btn btn-block btn-outline-secondary" asp-action="Logout"
+                   asp-controller="Account">Logout</a>
+            </span>
+
+        }
+
+
     </div>
     <div class="row m-1 p-1">
         <div id="categories" class="col-3">
             @*ViewComponent : NavigationMenu*@
             @*Call Navigation Menu Class*@
-            <vc:navigation-menu /> 
+
+            <vc:navigation-menu />
         </div>
         <div class="col-9">
             @RenderBody()

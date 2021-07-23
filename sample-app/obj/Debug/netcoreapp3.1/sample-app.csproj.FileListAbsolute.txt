@@ -103,3 +103,4 @@ D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\sample-app.csprojAssemblyReference.cache
+D:\FreeLancerAssignments\TataPower\dotnetcoreapp\sample-app\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs

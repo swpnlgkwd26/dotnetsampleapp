@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
@@ -14,6 +15,10 @@ using System.Threading.Tasks;
 namespace sample_app.Controllers
 {
    
+    [Authorize(Roles = "Administrator,User")] // Or
+
+    //[Authorize(Roles = "Administrator")] // And
+    //[Authorize(Roles = "User")]
     public class HomeController : Controller
     {
         private readonly IStoreRepository _repository;
@@ -38,6 +43,7 @@ namespace sample_app.Controllers
         }
        
 
+       // [AllowAnonymous]
         public IActionResult Index(string category,int productPage =1)
         {
             // Product Infromation : Model11
@@ -69,6 +75,8 @@ namespace sample_app.Controllers
             //Product + PAgination
             return View(productListViewModel); //Page       
         }
+
+        //[Authorize(Roles ="User")]
         public IActionResult AboutUs()
         {
             throw new Exception();

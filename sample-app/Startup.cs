@@ -108,7 +108,8 @@ namespace sample_app
             // Routing Feature 2 Middlewares
             // 1. UseRouting :  Select best match route
             app.UseRouting();
-
+            app.UseAuthentication(); // Identity is Enabled using UseAuthentication
+            app.UseAuthorization();
             // 2. UseEndpoints : Contains Set of Endpoints
             app.UseEndpoints(endpoints =>
             {
