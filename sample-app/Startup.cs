@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using sample_app.Extensions;
+using sample_app.Filters;
 using sample_app.Middlewares;
 using sample_app.Models;
 using System;
@@ -72,6 +73,12 @@ namespace sample_app
             // Configure Identity System
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<TataPowerDataContext>();
+
+
+            // Register the Filter
+            services.AddScoped<CustomExceptionFilter>();
+
+
 
         }
 

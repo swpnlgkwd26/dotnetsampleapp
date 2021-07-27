@@ -1,0 +1,7 @@
+﻿
+@{
+    ViewData["Title"] = "Custom Error Page";
+    var exception = ViewData["Exception"] as Exception;
+}
+<h2>  An Error has occurred</h2>
+<p> @exception.Message</p>

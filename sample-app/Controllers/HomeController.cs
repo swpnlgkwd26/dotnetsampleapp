@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
+using sample_app.Filters;
 using sample_app.Models;
 using sample_app.ViewModels;
 using System;
@@ -15,10 +16,12 @@ using System.Threading.Tasks;
 namespace sample_app.Controllers
 {
    
-    [Authorize(Roles = "Administrator,User")] // Or
+   /* [Authorize(Roles = "Administrator,User")]*/ // Or
 
     //[Authorize(Roles = "Administrator")] // And
     //[Authorize(Roles = "User")]
+
+    [AddHeader("Author","Swapnil")]
     public class HomeController : Controller
     {
         private readonly IStoreRepository _repository;
@@ -131,8 +134,13 @@ namespace sample_app.Controllers
             return View();
         }
         [HttpPost]
+        [ServiceFilter(typeof(CustomExceptionFilter))]
         public IActionResult Create(ProductAddViewModel productAddViewModel)
         {
+            if (productAddViewModel.Price == 0)
+            {
+                throw new Exception("Please dont add product with price 0");
+            }
             // if Model is valid
             if (ModelState.IsValid)
             {
