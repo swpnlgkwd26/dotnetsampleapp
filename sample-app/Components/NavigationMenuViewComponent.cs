@@ -18,6 +18,7 @@ namespace sample_app.Components
         // Automatically Called Whenever NV Will be used
         public IViewComponentResult Invoke()
         {
+            ViewBag.SelectedCategory = RouteData?.Values["category"];
             // Through Store Repository i can connect to ProductMemory Data
             // Select Distinct Category From Table 
             var distinctCategory = _repository.Products
