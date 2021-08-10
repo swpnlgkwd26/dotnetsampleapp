@@ -1,7 +1,11 @@
-﻿{
+{
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/sample-app",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:29335",
       "sslPort": 0
@@ -16,12 +20,13 @@
       }
     },
     "sample_app": {
-      "commandName": "Project",
+      "commandName": "IIS",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "http://localhost:5000"
     }
   }
 }

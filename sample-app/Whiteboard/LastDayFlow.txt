@@ -1,0 +1,197 @@
+
+  30 days  
+ 
+  Trends
+  - Cloud 
+  -  JS framework
+  -  Containerize
+  - MS
+  - Cross Platform
+ 
+  .Net Core
+  - Build Cross Platform application
+  
+  Project Structre
+  -  Program.cs , Startup.cs :  Configure : Request Piepeline, ConfigureServices : Service Object
+  Configure :  Middleware
+  -  Segment code : Modify 
+  ConfigureServices 
+   - Service Object Creation ..  Services.AdScopeed, AddIdentity
+
+ MVC
+ - Model =Data  View =   Display Controller : browser Reque accept => Model Data => Pass to View
+
+ i. Separation
+ ii. Unit Testable
+ iii. DI
+
+ Model Binding : View Data .. Action Parameter
+ Model validation :  DAta Annotations :  Required, Range, Compare : Server Side
+ -  jQuery libraries
+
+ EF
+ - ORM Framework
+ -  Classes =>  DB Generate :  Code first model
+ - DB  => classes :  DB first model
+
+ i. LEss amount code
+ ii. Run time Erorr
+ Libraries
+ Context : DbContext
+ appSetting : IConfiguration Read
+ ConfigureService  : Register Context and ConnectionString
+
+ Automapper
+  - View + ViewModel
+  - Data + Model
+  Model => ViewModel 
+ i. Install
+ ii. Class :  Profile
+ iii.  Ctor :  CreateMap<Source, Destination>()
+
+
+ Web API
+ -  Remoting, WebService , WCF , Web API, gRPC : 2 app want to communicate
+  
+ Web API
+ -  Controller:  ControllerBase
+ -  Attribute :  HttpGet, HttpPut, Post ,Delete
+ -  Codes :  Ok, NotFound, CreatedAt...etc  
+ -  Content Negotiation : JSON .. API :  XML , VCF
+ -  i. Client Accept ii.  Application iii.Action 
+ - Swagger  :  Testing tool
+ - Postman : Local
+
+ ASP.Net Identity
+ -  Auth and Authorize
+ -  Install Libraries
+ -  Context => IdentityDBContext
+ -  ApplicationUser : IdentityUser
+ - Generate tables :  Migrations
+ -  Register . AddIdentity Method
+ - UserMAnager, SignInManager,IDentityUser,IdentityRole
+
+ Login, Logout, Register 
+
+
+ Testing
+ - Unit Testing : Action methods
+  i. XUnit : Latest Testing tool
+
+ - AAA
+  Arrange
+ ACT
+ Assert
+ -  Integration Testing : Component interact... DB 
+
+ Migration
+ -  Tools :  .Net Portability .. try-convert
+ 
+ i. Project Structre
+ ii. Project Model Available :  Project Structure
+ iii. NO Project Structr..Project model .. Extra
+
+ ASP.Net Web Forms, Web Services
+
+
+ Hosting and Deployment
+ -  IIS, Azure
+ IIS .. :  SAme : App, API
+ - Azure Hosting bundle IIS
+
+
+ NoSQL Product : Free ...  Support : Mondog db..cassandra  .. PErformance.. DAta  .. Services
+ Relational  :  Postgre, cockroach
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
